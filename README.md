@@ -2,6 +2,33 @@
 <img width="318" height="211" alt="Project Technology" src="https://github.com/user-attachments/assets/c9b264b9-8dc7-45d5-a407-293ff33fdf98" />
 
 
+# Online Food Ordering System - Complete Architecture
+
+## Module wise Component Mapping Chart
+
+| Module | Entity | Service Interface | Service Implementation | Repository | Request DTO | Response DTO | Controller |
+|--------|--------|-------------------|------------------------|------------|-------------|--------------|------------|
+| **User Management** | User, UserRole | UserService | UserServiceImpl | UserRepository | LoginRequest, UserRegistrationRequest | UserResponse, LoginResponse | UserController |
+| **Restaurant Management** | Restaurant, RestaurantAddress | RestaurantService | RestaurantServiceImpl | RestaurantRepository | RestaurantRequest | RestaurantResponse, RestaurantInfoResponse | RestaurantController |
+| **Menu Management** | MenuItem, Category | MenuItemService | MenuItemServiceImpl | MenuItemRepository, CategoryRepository | MenuItemRequest | MenuItemResponse | MenuController |
+| **Cart Management** | Cart, CartItem | CartService | CartServiceImpl | CartRepository, CartItemRepository | CartItemRequest | CartResponse, CartItemResponse | CartController |
+| **Order Management** | Order, OrderItem, OrderStatus, PaymentStatus | OrderService | OrderServiceImpl | OrderRepository, OrderItemRepository | OrderRequest, OrderItemRequest | OrderResponse, OrderItemResponse | OrderController |
+| **Address Management** | Address | AddressService | AddressServiceImpl | AddressRepository | AddressRequest | AddressResponse | AddressController |
+| **Payment Processing** | Payment, PaymentMethod | PaymentService | PaymentServiceImpl | PaymentRepository | PaymentRequest | PaymentResponse | PaymentController |
+| **Order Tracking** | OrderTracking | TrackingService | TrackingServiceImpl | OrderTrackingRepository | LocationUpdateRequest | TrackingResponse | TrackingController |
+| **Review & Rating** | Review | ReviewService | ReviewServiceImpl | ReviewRepository | ReviewRequest | ReviewResponse | ReviewController |
+| **Wallet Management** | Wallet, WalletTransaction, TransactionType, TransactionStatus | WalletService | WalletServiceImpl | WalletRepository | WalletRequest | WalletResponse, WalletTransactionResponse | WalletController |
+| **Delivery Management** | User (as DeliveryPartner) | DeliveryService | DeliveryServiceImpl | UserRepository | DeliveryAssignmentRequest | DeliveryResponse, DeliveryInfoResponse | DeliveryController |
+| **Notification** | - | NotificationService | NotificationServiceImpl | - | NotificationRequest | NotificationResponse | NotificationController |
+| **Authentication & Authorization** | - | AuthService | AuthServiceImpl | UserRepository | LoginRequest, RegisterRequest | JwtResponse, AuthResponse | AuthController |
+| **Coupon/Discount** | Coupon (if implemented) | CouponService | CouponServiceImpl | CouponRepository | CouponRequest | CouponResponse | CouponController |
+
+## Detailed Component Breakdown
+
+### 1. User Management Module
+
+
+
 # 🍔 Online Food Ordering System - Enterprise Level Backend
 
 ## 📋 Project Overview
